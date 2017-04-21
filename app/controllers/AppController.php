@@ -210,7 +210,7 @@ class AppController
 	function show(){
 
 		if($this->user){
-			
+			$user = $this->user;
 			$message = ""; $class = ""; $iduser = $user->id;
 			
 			$obj = Session::flash("UserController-update");

@@ -10,11 +10,11 @@ class UserNetwork extends Entity
 	{
 		# code...
 	}
-	static function all(){
+	static function all($arg1 = null, $arg2 = null){
 		return parent::all(self::TABLE);
 	}
 
-	static function where($arg1=null,$arg2 = null){
+	static function where($arg1=null,$arg2 = null, $arg3 = null){
 		return parent::where(self::TABLE,$arg1,$arg2);
 	}
 }

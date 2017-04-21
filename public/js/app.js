@@ -21,6 +21,10 @@ var app = {
 			var inputFileImage = document.getElementById(obj);
 			var file = inputFileImage.files[0];
 
+			var loading = $("<img>").attr({"src":"/imgs/default/loading.gif","class":"loading"});
+			$(".sub-content-popup").append(loading);
+			app.popup();
+
 			if(file!==undefined && file!==null){
 
 				var formData = new FormData();
@@ -33,6 +37,9 @@ var app = {
 	                type: 'POST',
 					dataType:'json',
 	                success: function(r) {
+	                	
+	                	app.popup();
+
 	                	$("form[name=profile] b[name=message]").removeClass("error")
 
 	                	if(r.success){

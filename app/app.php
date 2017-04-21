@@ -1,6 +1,6 @@
 <?php
 // global settings
-error_reporting(E_ERROR);
+//error_reporting(E_ERROR);
 //error_reporting(E_ALL ^ E_NOTICE);
 // SET TIMEZONE
 date_default_timezone_set('America/Lima');

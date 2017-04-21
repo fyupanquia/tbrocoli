@@ -79,7 +79,7 @@ class UserController
 
 	function sendMessage($arr){
 
-		$message = View::render("user/mail",["fullname"=>$arr["fullname"],"web"=> domain() , "confirmation_code"=>$confirmation_code]);
+		$message = View::render("user/mail",[ "fullname"=>$arr["fullname"],"web"=> domain() , "confirmation_code"=>$arr["confirmation_code"] ]);
 
 		$email = new Email();
 		$email->Subject = "BIENVENIDO AL TEAM BROCOLI";

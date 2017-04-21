@@ -13,5 +13,5 @@ RewriteRule ^login?$ index.php?service=App&method=login
 RewriteRule ^password?$ index.php?service=App&method=password
 RewriteRule ^networks?$ index.php?service=App&method=networks
 
-RewriteRule ^u/([0-9]+)?$ index.php?service=App&method=show
+RewriteRule ^u/(\w+)?$ index.php?service=App&method=show
 RewriteRule ^confirm/(\w+)?$ index.php?service=User&method=confirmEmail&confirmation_code=$1

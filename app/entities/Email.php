@@ -1,8 +1,8 @@
 <?php
 
 	//Incluimos la clase de PHPMailer
-	require_once( $_SERVER['DOCUMENT_ROOT'].'/libraries/phpmailer/class.phpmailer.php');
-	require_once( $_SERVER['DOCUMENT_ROOT'].'/libraries/phpmailer/class.smtp.php');
+	require_once( $_SERVER['DOCUMENT_ROOT'].'/libraries/PHPMailer/class.phpmailer.php');
+	require_once( $_SERVER['DOCUMENT_ROOT'].'/libraries/PHPMailer/class.smtp.php');
 
 /**
 * 

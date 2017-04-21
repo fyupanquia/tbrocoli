@@ -1,6 +1,6 @@
 <?php
 
-const DB_SERVER ="mysql.hostinger.es";
-const DB_NAME = "u222235767_team";
-const DB_USER = "u222235767_broco";
-const DB_PASSWORD = 'YhKDwV2kLuRk';
+const DB_SERVER ="localhost";
+const DB_NAME = "teambrocoli";
+const DB_USER = "root";
+const DB_PASSWORD = '';

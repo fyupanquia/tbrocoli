@@ -1,0 +1,60 @@
+<ul class='brocolies-list'>
+
+<?php foreach ($users as $key => $user): ?>
+
+		<?php if ( $key>=$since && $key < $until ): ?>
+
+				<li>
+				   <div class='flex brocoli-item' >
+					   	<div>
+					   		<a href='/u/<?= $user->alias ?>' target='_self'>
+
+					   		<?php if ( empty($user->avatar) ): ?>
+					   				<img src='/imgs/default/user.png' />
+					   		<?php else: ?>
+					   				<img src='/imgs/users/<?= $user->iduser ?>/<?= $user->avatar ?>' />
+					   		<?php endif ?>
+
+					   		
+					   		</a>
+					   	</div>
+					   	<div class='flex brocoli-item-description' >
+					   		<div> 
+					   			<div class='height-5p' ></div>
+					   			<div>
+					   				<a href='/u/<?=$user->alias?>' target='_self'> <?= $user->fullname ?> </a>
+					   			</div>
+					   		</div>
+					   		<div>
+						   		<div class='height-5p' ></div>
+
+						   		<div class='content-country' >
+
+							   		<?php if ($user->acountry): ?>
+							   			<i class='flag flag-<?= $user->acountry ?>' alt='<?= $user->country ?>'></i>
+							   		<?php endif ?>
+
+						   		</div>
+					   		</div>
+					   	</div>
+				   </div>
+			   </li>
+
+		<?php endif ?>
+
+<?php endforeach ?>
+
+</ul>
+
+ <div class='pages <?= $pages ?> ' >
+	<ul>
+		<?php for ($i=1; $i <= $pages ; $i++): ?>
+			<?php $class = ($i==$page)? "selected": ""; ?>
+			
+			<li class='<?= $class ?>' >
+  				<div onClick='brocolis.page(<?= $i ?>)'  ><?= $i ?></div>
+  		  	</li>
+
+		<?php endfor ?>
+	</ul>
+</div>

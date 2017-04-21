@@ -1,0 +1,17 @@
+RewriteEngine On
+errordocument 404 /
+
+RewriteRule ^js/(.*)$ /public/js/$1 [L]
+RewriteRule ^css/(.*)$ /public/css/$1 [L]
+RewriteRule ^imgs/(.*)$ /public/imgs/$1 [L]
+RewriteRule ^fonts/(.*)$ /public/fonts/$1 [L]
+
+RewriteRule ^services?$ index.php
+RewriteRule ^profile?$ index.php?service=App&method=profile
+RewriteRule ^signup?$ index.php?service=App&method=signup
+RewriteRule ^login?$ index.php?service=App&method=login
+RewriteRule ^password?$ index.php?service=App&method=password
+RewriteRule ^networks?$ index.php?service=App&method=networks
+
+RewriteRule ^u/([0-9]+)?$ index.php?service=App&method=show
+RewriteRule ^confirm/(\w+)?$ index.php?service=User&method=confirmEmail&confirmation_code=$1
